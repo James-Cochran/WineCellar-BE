@@ -93,6 +93,7 @@ GEM
       irb (~> 1.10)
       reline (>= 0.3.8)
     diff-lcs (1.6.0)
+    docile (1.4.1)
     drb (2.2.1)
     erubi (1.13.1)
     factory_bot (6.5.1)
@@ -111,6 +112,8 @@ GEM
       pp (>= 0.6.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
+    jsonapi-serializer (2.2.0)
+      activesupport (>= 4.2)
     logger (1.6.6)
     loofah (2.24.0)
       crass (~> 1.0.2)
@@ -227,6 +230,12 @@ GEM
     securerandom (0.4.1)
     shoulda-matchers (6.4.0)
       activesupport (>= 5.2.0)
+    simplecov (0.22.0)
+      docile (~> 1.1)
+      simplecov-html (~> 0.11)
+      simplecov_json_formatter (~> 0.1)
+    simplecov-html (0.13.1)
+    simplecov_json_formatter (0.1.4)
     stringio (3.1.5)
     thor (1.3.2)
     timeout (0.4.3)
@@ -255,12 +264,14 @@ DEPENDENCIES
   debug
   factory_bot_rails
   faker
+  jsonapi-serializer
   pg (~> 1.1)
   pry
   puma (>= 5.0)
   rails (~> 7.1.5, >= 7.1.5.1)
   rspec-rails
   shoulda-matchers
+  simplecov
   tzinfo-data
 
 RUBY VERSION
