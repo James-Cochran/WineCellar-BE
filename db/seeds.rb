@@ -7,3 +7,21 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+Wine.destroy_all
+User.destroy_all
+
+users = 1.times.map do
+  User.create!(username: Faker::Internet.username)
+end
+
+users.each do |user|
+  3.times do
+    Wine.create!(
+      name: Faker::Beer.name,
+      wine_type: ["Red", "White", "Rose", "Sparkling"].sample,
+      rating: rand(1..5),
+      notes: Faker::Lorem.sentence,
+      user: user
+    )
+  end
+end
